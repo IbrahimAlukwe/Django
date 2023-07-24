@@ -1,0 +1,14 @@
+body{
+    background: #0d6efd;
+
+}
+.a {color: greenyellow;
+text-decoration: none;
+}
+
+.a:hover{
+    color: mediumblue;
+    background-color: azure;
+    border-radius: 4px;
+    padding: 10px;
+}

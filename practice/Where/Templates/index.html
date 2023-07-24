@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<br><br>
+
+<a class="a" href="{% url 'index' %}">Home</a>
+<a class="a" href="{% url 'mm' %}">Contact</a>
+<a class="a" href="">Drop</a>
+
+<div class="row text-center" >
+
+    <div class="col-md-6 one">
+        <form action="" method="post"><br>
+            {% csrf_token %}
+
+            <input type="text"placeholder="Name" class="form-control w-50"><br><br>
+            <input type="text"placeholder="School" class="form-control"><br><br>
+            <input type="text"placeholder="Email" class="form-control" ><br><br>
+            <input type="submit"  class=" btn btn-warning"  >
+
+        </form>
+    </div>
+
+    <div class="col-md-6  two">
+        <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Edit</th>
+        <th scope="col" >Delete</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Email</td>
+      <td>Edit</td>
+        <td>Delete</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Email</td>
+      <td>Edit</td>
+        <td>Delete</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="1"></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+</body>
+</html>
